@@ -7,6 +7,7 @@ const express = require('express');
 const PORT = 3000;
 const app = express();
 const path = require('path');
+const api = require('./routes/index');
 
 // boilerplate middleware "JUS"
 app.use(express.json());
@@ -14,7 +15,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 
-// routes start ================================================
+// routes start ----------------
+
+app.use('/api', api); // sub-routes for all '/api'
 
 app.get('/data',(req,res)=>{
     res.json(dbData)
@@ -24,25 +27,7 @@ app.get('/notes',(req,res)=>{
     res.sendFile(path.join(__dirname,'public/notes.html'))
 });
 
-app.get('/api/notes', (req, res) => {
-    dbData = jcrud.dbGetData();
-    res.json(dbData);
-  });
-
-app.post('/api/notes', (req, res) => {
-    let savedNote = req.body;
-    savedNote.id = uuidv4();
-    jcrud.dbAppend(savedNote);
-    res.json(savedNote);
-  });
-  
-app.delete('/api/notes/:id', (req, res) => {
-    let noteID = req.params.id;
-    jcrud.dbDelete(noteID);
-    res.json({ message:'Note Deleted' });
-  });
-  
-// routes end ================================================
+// routes end ----------------
 
 
 // listen
