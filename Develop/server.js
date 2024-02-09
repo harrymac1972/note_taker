@@ -1,5 +1,8 @@
 // init
 const jcrud = require('./jcrud');
+const { v4: uuidv4 } = require('uuid');
+
+// server generic
 const express = require('express');
 const PORT = 3000;
 const app = express();
@@ -27,7 +30,9 @@ app.get('/api/notes', (req, res) => {
   });
 
 app.post('/api/notes', (req, res) => {
-    const savedNote = req.body;
+    let savedNote = req.body;
+    savedNote.id = uuidv4();
+    console.log(savedNote.id);
     jcrud.dbAppend(savedNote);
     res.json(savedNote);
   });
