@@ -32,9 +32,14 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     let savedNote = req.body;
     savedNote.id = uuidv4();
-    console.log(savedNote.id);
     jcrud.dbAppend(savedNote);
     res.json(savedNote);
+  });
+  
+app.delete('/api/notes/:id', (req, res) => {
+    let noteID = req.params.id;
+    jcrud.dbDelete(noteID);
+    res.json({ message:'Note Deleted' });
   });
   
 // routes end ================================================

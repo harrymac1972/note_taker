@@ -1,12 +1,16 @@
-
 const fs = require("fs");
 
 
 function dbAppend(savedNote) {
-    dbData = dbGetData();
-    dbData.push(savedNote);
-    console.log(dbData);
-    dbWrite(dbData);
+    dbDataArr = dbGetData();
+    dbDataArr.push(savedNote);
+    dbWrite(dbDataArr);
+}
+
+function dbDelete(noteID) {
+    dbDataArr = dbGetData();
+    let newDataArr = dbDataArr.filter(obj => obj.id !== noteID);
+    dbWrite(newDataArr);
 }
 
 function dbGetData() {    
@@ -18,17 +22,4 @@ function dbWrite(noteArr) {
 }
 
 
-
-
-// ==========================================
-
-
-// let savedNote = {
-//     "title":"Groceries",
-//     "text":"at Safeway"
-// }
-// dbAppend(savedNote);
-
-// ==========================================
-
-module.exports = { dbAppend,dbGetData };
+module.exports = { dbAppend,dbDelete,dbGetData };
