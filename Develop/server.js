@@ -1,4 +1,5 @@
 // init
+const dbData = require('./db/db.json');
 const express = require('express');
 const PORT = 3000;
 const app = express();
@@ -8,10 +9,6 @@ const path = require('path');
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
-
-// temp data
-let dbData = {"name":"Harry",
-                "role":"Dude"}
 
 // routes
 app.get('/data',(req,res)=>{
