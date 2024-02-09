@@ -1,18 +1,1 @@
-[
-    {
-        "title":"t test ",
-        "text":"test"
-    },
-    {
-        "title":"t one",
-        "text":"one"
-    },
-    {
-        "title":"t two",
-        "text":"two"
-    },
-    {
-        "title":"t three",
-        "text":"three"
-    }
-]
+[{"title":"t test ","text":"test"},{"title":"t one","text":"one"},{"title":"t two","text":"two"},{"title":"t three","text":"three"},{"title":"Groceries","text":"at Safeway"},{"title":"Groceries","text":"at Safeway"}]

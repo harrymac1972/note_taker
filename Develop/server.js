@@ -22,7 +22,7 @@ app.get('/notes',(req,res)=>{
 });
 
 app.get('/api/notes', (req, res) => {
-    dbData = jcrud.readDB();
+    dbData = jcrud.dbGetData();
     res.json(dbData);
   });
 
