@@ -1,5 +1,6 @@
 // init
-const dbData = require('./db/db.json');
+// const dbData = require('./db/db.json');
+const jcrud = require('./jcrud');
 const express = require('express');
 const PORT = 3000;
 const app = express();
@@ -21,6 +22,7 @@ app.get('/notes',(req,res)=>{
 });
 
 app.get('/api/notes', (req, res) => {
+    dbData = jcrud.readDB();
     res.json(dbData);
   });
 

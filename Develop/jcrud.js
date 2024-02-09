@@ -1,8 +1,14 @@
 
 const fs = require("fs");
 
+
+function readDB() {    
+    return JSON.parse(fs.readFileSync('./db/db.json', 'utf8'))
+}
+
+
 function updateDB(savedNote) {
-    oldData = JSON.parse(fs.readFileSync('./db/db.json', 'utf8'));
+    oldData = readDB();
     console.log(oldData);
     oldData.push(savedNote);
     console.log("=======");
@@ -15,3 +21,5 @@ let savedNote = {
     "text":"at Safeway"
 }
 updateDB(savedNote);
+
+module.exports = { readDB };
