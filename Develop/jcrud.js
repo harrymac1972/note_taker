@@ -31,4 +31,4 @@ function dbWrite(noteArr) {
 
 // ==========================================
 
-module.exports = { dbGetData };
+module.exports = { dbAppend,dbGetData };

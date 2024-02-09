@@ -1,5 +1,4 @@
 // init
-// const dbData = require('./db/db.json');
 const jcrud = require('./jcrud');
 const express = require('express');
 const PORT = 3000;
@@ -29,7 +28,7 @@ app.get('/api/notes', (req, res) => {
 app.post('/api/notes', (req, res) => {
     const savedNote = req.body;
     console.log(savedNote);
-    res.json(savedNote);
+    jcrud.dbAppend(savedNote);
   });
   
 
