@@ -8,6 +8,16 @@ app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
+// temp data
+let dbData = {"name":"Harry",
+                "role":"Dude"}
+
+// routes
+app.get('/notes',(req,res)=>{
+    res.json(dbData)
+});
+
+
 // listen
 app.listen(PORT, () => {
     console.log(`Listening on PORT ${PORT}`);
