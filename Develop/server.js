@@ -11,7 +11,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 
-// routes
+// routes start ================================================
+
 app.get('/data',(req,res)=>{
     res.json(dbData)
 });
@@ -27,10 +28,11 @@ app.get('/api/notes', (req, res) => {
 
 app.post('/api/notes', (req, res) => {
     const savedNote = req.body;
-    console.log(savedNote);
     jcrud.dbAppend(savedNote);
+    res.json(savedNote);
   });
   
+// routes end ================================================
 
 
 // listen
