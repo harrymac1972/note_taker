@@ -22,7 +22,14 @@ app.get('/notes',(req,res)=>{
 
 app.get('/api/notes', (req, res) => {
     res.json(dbData);
-  });  
+  });
+
+app.post('/api/notes', (req, res) => {
+    const savedNote = req.body;
+    console.log(savedNote);
+    res.json(savedNote);
+  });
+  
 
 
 // listen
