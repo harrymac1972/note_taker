@@ -1,9 +1,9 @@
 
-# (( TITLE ))
+# Note Taker
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
-____
+The Note Taker App is one that allows users to make notes, click on the existing ones to see the contents, and delete existing ones as well.
 
 ## Table of Contents
 - [Installation](#installation)
@@ -17,10 +17,11 @@ ____
 - [GitHub Link](#github-link)
 
 ## Installation
-____
+1. "**Node.js**" must be installed on local machine.
+2. Once in your project folder please type "**npm i -y**" for all dependencies.
 
 ## Usage
-____
+To use the application, enter "**node index.js**" in a CLI of your choosing.  The buttons are intuitive, though on has to watch for how they are changing (especially in the top-right of the app).
 
 ## License
 This application is licensed by: [MIT](https://opensource.org/licenses/MIT)
@@ -29,7 +30,7 @@ This application is licensed by: [MIT](https://opensource.org/licenses/MIT)
 You may 'fork' the project in the github repository.
 
 ## Tests
-In Bash Console enter "**npm run test**".
+n/a
 
 ## Questions
 If you have any questions, please contact:
@@ -37,8 +38,7 @@ If you have any questions, please contact:
 -- harrymac1972@gmail.com.
 
 ## Screenshots
-![Screenshot_1](./)
-![Screenshot_2](./)
+![Screenshot_1](./Develop/public/assets/imgs/screenshot01-some_notes.png)
 
 ## Demonstration Video
 n/a
