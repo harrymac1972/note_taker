@@ -1,3 +1,5 @@
+// jcrud = JSON CRUD functions for our "data-base"
+
 const fs = require("fs");
 
 
