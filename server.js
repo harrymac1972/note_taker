@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid');
 
 // server generic
 const express = require('express');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const path = require('path');
 const api = require('./routes/index');
@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 
-// routes start ----------------
+// routes start -----------------
 
 app.use('/api', api); // sub-routes for all '/api'
 
