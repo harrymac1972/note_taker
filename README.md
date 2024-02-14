@@ -38,12 +38,14 @@ If you have any questions, please contact:
 -- harrymac1972@gmail.com.
 
 ## Screenshots
-![Screenshot_1](./Develop/public/assets/imgs/screenshot01-some_notes.png)
+![Screenshot_1](./public/assets/imgs/screenshot01-some_notes.png)
 
 ## Demonstration Video
 n/a
 
 ## GitHub Link
-<a href="https://github.com/harrymac1972/note_taker">Note Taker</a>
+<a href="https://github.com/harrymac1972/note_taker">Note Taker on Github</a>
 
 
+## Heroku Link
+<a href="https://secret-temple-53325-8119dcab1778.herokuapp.com">Note Taker deployed</a>
