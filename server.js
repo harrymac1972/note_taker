@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.static('public'));
 
 
-// routes start -----------------
+// routes start ----------------
 
 app.use('/api', api); // sub-routes for all '/api'
 
