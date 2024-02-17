@@ -1,6 +1,3 @@
-// init
-const jcrud = require('./jcrud');
-const { v4: uuidv4 } = require('uuid');
 
 // server generic
 const express = require('express');
